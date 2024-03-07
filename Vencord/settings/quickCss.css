@@ -1,0 +1,427 @@
+/* lelelelelelele */
+
+/* i'm sorry this is a mess :33333 */
+
+
+
+/* MEMBERLIST WIDTH optional
+.memberInner_a32223.layout_bb8e67, .members__9f47b {
+    width: 500px;
+}
+*/
+
+/* my name */
+[src="https://ugc.decor.fieryflames.dev/a_6c5ecb8a49cebade73bb1622b028b308.png?animate=false"] + .header__39b23>.headerText_f47574>.username_d30d99 {
+    background-image: linear-gradient(to right, #FF00E1,#FFEA00,#00ccff, #00ccff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+
+/* custom home icon */
+.listItemWrapper__1f93b.selected_ad2d13 {
+    scale: 1.01;
+}
+[aria-label="Direct Messages"]>.childWrapper__01b9c {
+    background: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1716740/ff0e84c4996b1c9cb299ba2ab1c6454c5d129b49.png);
+    background-size: 140%;
+    background-position: center;
+}
+
+/* more options
+https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation_rot.gif
+https://cdn.dribbble.com/users/3191392/screenshots/6370156/comp_3_2.gif
+https://64.media.tumblr.com/842f121c9e2bdfa3305be076380e40bb/tumblr_n11la4PwmP1s4fz4bo1_500.gif
+https://www.lexaloffle.com/bbs/files/15232/hyperspace_1.gif
+https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRvend6dDJmdHo4M201bnFsZGNpcHl4bjF3dmVobGxoZHlwOGFoaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT8qB50yhFINpFTymI/giphy.gif
+https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif
+https://i0.wp.com/www.metroweekly.com/wp-content/uploads/2017/03/Space-Travel.gif?fit=500%2C500&ssl=1
+https://i.redd.it/wu1nao5gtsr91.gif
+https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1716740/ff0e84c4996b1c9cb299ba2ab1c6454c5d129b49.png
+https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/1070330/97227479c36b82d531c866562be67193c691a6d5.gif
+*/
+
+/* hide sevrer discovery */
+[mask="url(#a94c8a3c-2150-4a2a-b848-de8c77b4edb2)"] {
+    display: none;
+}
+
+
+/* temporary server list tweak */
+.scroller__3d071.none__51a8f.scrollerBase_dc3aa9>.listItem_fa7b36 {
+    display: none;
+}
+
+/* remove 6-line constraint from About Me sections */
+.lineClamp2Plus_d4306b {
+    -webkit-line-clamp: unset !important;
+}
+
+/* adjust bar padding */
+.attachButton_b1db83 {
+    padding-inline: 10px;
+}
+
+/* custom chat bar text */
+.placeholder_e68c63.slateTextArea__0661c.fontSize16Padding__48818 {
+    visibility: hidden;
+}
+.placeholder_e68c63.slateTextArea__0661c.fontSize16Padding__48818::before {
+    visibility: visible;
+    content: "say something stupid"; 
+    /* "add nothing to the conversation" */
+    /* "start a pointless argument" */
+}
+
+/* remove gift, sticker, and gif buttons */
+[aria-label="Send a gift"] {
+    display: none;
+}
+[aria-label="Open sticker picker"] {
+    display: none;
+}
+[aria-label="Open sticker picker"] {
+    display: none;
+}
+[aria-label="Open GIF picker"] {
+    display: none;
+}
+
+/* custom emoji */
+[aria-label="Select emoji"]::before {
+    content: "";
+    background-image: url(https://cdn.discordapp.com/emojis/1196313509525471355.webp?size=96&quality=lossless);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: block;
+    visibility: visible;
+}
+[aria-label="Select emoji"] {
+    visibility: hidden;
+}
+
+/* translate button */
+button[aria-label="Open Translate Modal"] {
+    display: none;
+}
+
+/* padding for the top of server list */
+.platform-win .scroller__3d071, .platform-osx .scroller__3d071{
+    padding-top: 10px;
+}
+
+
+/* remove help button (why is this here?) */
+div[aria-label="Help"] {
+    display: none !important;
+}
+
+/* hide update button */
+[aria-label="Update Ready!"] {
+    display: none;
+}
+
+
+/* remove notification settings button */
+div[aria-label="Notification Settings"] {
+    display: none !important;
+}
+
+/* weird color tomfoolery with the member list button */
+.clickable_d23a1a .icon__4cb88 {
+    color: var(--interactive-normal);
+}
+
+/* remove inbox button */
+.recentsIcon__3c4cf {
+    display: none;
+}
+
+/* search bar tweaks: increased height, shrinks to icon */
+.searchBar_e0c60b {
+    height: 30px !important;
+    width: 30px ;
+    padding: 3px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.icon__46425.iconLayout__9fbb1.small_c2007e {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+/* round "find or start a conversation" */
+.searchBarComponent__22760 {
+    border-radius: 8px !important;
+    height: 30px !important;
+    padding-inline: 8px;
+}
+
+/* shrink Vencord Menu button */
+.container__11d72 {
+    padding-right: 0px;
+}
+.search__07df0 {
+margin-right: 0px;
+}
+.vc-toolbox-btn {
+    margin-inline: -8px;
+    opacity: .03; /* he lurks in the shadows */
+    width: max-content;
+    display: block;
+}
+
+/* dim status text in member list */
+.activity__3cbac {
+    opacity: .5 !important;
+}
+
+/* dim timestamps */
+.timestamp_cdbd93.timestampInline__470e0 {
+    opacity: .5;
+}
+
+/* hide custom status from user tray */
+.panelSubtextContainer_f28bed {
+    display: none;
+}
+
+/* adjust name in user tray */
+.text-sm-normal_e612c7.title__10613 {
+    font-size: 12pt !important;
+    color: var(--interactive-normal);
+    background-color: var(--background-secondary); 
+    border-radius: 4px;
+    padding: 3px;
+    text-align: center;
+}
+
+/* hide "create channel" under category */
+.children_d4d259 {
+    display: none;
+}
+
+/* hide "create invite for channel" in list */
+[aria-label="Create Invite"] {
+    display: none !important;
+}
+
+/* self-explanatory */
+.newMemberBadge__17bc0 {
+    display: none;
+}
+
+/* remove nitro and shop buttons from home */
+.channel_c21703.container__8759a:nth-child(3) {
+    display: none;
+}
+.channel_c21703.container__8759a:nth-child(4) {
+    display: none;
+}
+
+/* NEW UNREADS */
+.text-xs-semibold_a3a2b4.barText__1a44f {
+    text-indent: -9999px;
+    line-height: 0;
+}
+.text-xs-semibold_a3a2b4.barText__1a44f::after {
+    content: "scroll, dumbass";
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+}
+
+/* membercount tweaks */
+div#vc-membercount {
+    margin-top: 10px !important;
+    margin-left: 4px !important;
+    line-height: 30px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+}
+span[style="background-color: var(--green-360); width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 0.5em;"] {
+    display: none !important;
+}
+span[style="width: 6px; height: 6px; border-radius: 50%; border: 3px solid var(--primary-400); display: inline-block; margin-right: 0.5em; margin-left: 1em;"] {
+    display: none !important;
+}
+span[style="color: var(--primary-400);"]::before {
+    content: "/";
+    visibility: visible;
+    position: absolute;
+    display:contents;
+}
+span[style="color: var(--primary-400);"]::after {
+    content: " online";
+    visibility: visible;
+    position: absolute;
+    display:contents;
+}
+.membersGroup__85843.container_de798d {
+    padding-top: 20px;
+}
+
+/* tidy up VC permissions plugin 
+ {
+    display: none;
+}
+
+.vc-permviewer-userperms-sortorder-btn {
+    display: none;
+}
+[aria-label="Hide Permissions"] {
+    display: none;
+}
+.vc-expandableheader-btn::before {
+    content: "hello";
+    color: var(--interactive-normal);
+}
+*/
+
+
+/* shrink channel list unless hovered
+@keyframes slideclosed {
+    from {width: 240px;}
+    to {width: 100px;}
+}
+
+.sidebar_ded4b5 {
+    width: 100px;
+    animation-name: slideclosed;
+    animation-duration: .15s;
+}
+
+
+@keyframes slideopen {
+    from {width: 100px;}
+    to {width: 240px;}
+}
+
+.sidebar_ded4b5:hover {
+    width: 240px; // open to default size
+    animation-name: slideopen;
+    animation-duration: .15s;
+}
+*/
+
+/* call tweaks */
+
+/* remove screen sharing nitro prompt */
+.upsellBanner__4c9fb {
+    display: none;
+}
+
+/* noise supression button */
+[aria-label="Noise Suppression powered by Krisp"] {
+    display: none !important;
+}
+
+/* disconnect button red */
+[aria-label="Disconnect"] {
+    color: var(--red-430) !important;
+}
+
+/* arrow for VC backlink */
+.text-xs-normal__56c35.subtext__8f869.channel_d7d412::before {
+    content: "❮ ";
+}
+
+/* LIVE icon */
+.iconSpacing__59128.liveIconSpacing__7111d>.live_b195a5.liveSmall_ca35ec.eyebrow__847c8.textBadge__45d79.base__92a12.eyebrow__60985.liveShapeRound__811c0 {
+    width: 1em;
+    color: transparent;
+    scale: .5;
+}
+
+/* empty vc splash */
+.text-md-semibold__4cb23.heading__8ea31 {
+    line-height: .1;   
+    visibility: hidden;
+}
+.text-md-semibold__4cb23.heading__8ea31::before {
+    line-height: 1;
+    visibility: visible;
+    display: block;
+    content: "You're the only one here. Too bad you have no friends.";
+}
+.text-md-semibold__4cb23.heading__8ea31::after {
+    line-height: 1;
+    visibility: visible;
+    display: block;
+    content: "Maybe go touch some grass?";
+}
+
+.button__908fa.button_afdfd9.lookFilled__19298.colorPrimary__6ed40.sizeLarge__9049d.grow__4c8a4 {
+    text-decoration: line-through;
+}
+[alt="characters playing a game"] {
+    filter: grayscale();
+}
+
+/* meatball menu in stream box */
+.statusContainer__0d3df>.status__42e87.interactive__7ee97 {
+    display: none;
+}
+
+/* kill upper right toolbar in vc */
+.theme-dark.container__11d72.transparent__7f3e0>.upperContainer__993ba>.toolbar__88c63 {
+    display: none;
+}
+
+
+
+/* call menu button */
+.lastButton__27ef0.button_afdfd9.lookBlank__7ca0a.colorBrand_b2253e.grow__4c8a4 {
+    margin-right: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* custom role icons */
+
+[aria-label="Role icon, Server Booster"] {
+    content: url(https://cdn.discordapp.com/emojis/1181678735909470329.gif?size=40&quality=lossless);
+}
+
+[aria-label="Role icon, Admin"] {
+    content: url(https://cdn.discordapp.com/emojis/1196316025155756154.gif?size=40&quality=lossless);
+}
+
+[aria-label="Role icon, Codex (the youtube guy)"] {
+    content: url(https://cdn.discordapp.com/emojis/1163182695694745671.webp?size=96&quality=lossless);
+}
+
+/* hacky method, dont reccomend
+
+[style="color: rgb(255, 163, 82);"] {
+    margin-right: 22px;
+}
+[style="color: rgb(255, 163, 82);"]::after {
+    content: "";
+    background-image: url(https://cdn.discordapp.com/emojis/1196316025155756154.gif?size=40&quality=lossless);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    margin-inline: 5px;
+}
+
+*/
+

@@ -1,0 +1,436 @@
+
+
+
+general:
+  # Whether to automatically focus windows underneath the cursor.
+  focus_follows_cursor: false
+
+  # Whether to jump the cursor between windows focused by the WM.
+  cursor_follow_focus: false
+
+  # Whether to switch back and forth between the previously focused workspace
+  # when focusing the current workspace.
+  toggle_workspace_on_refocus: false
+
+  # Whether to show floating windows as always on top.
+  show_floating_on_top: true
+
+  # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
+  floating_window_move_amount: "5%"
+
+  # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
+  # window transition animations (on minimize, close, etc). Set to 'unchanged'
+  # to make no setting changes.
+  window_animations: "unchanged"
+
+gaps:
+  # Gap between adjacent windows.
+  inner_gap: "20px"
+
+  # Gap between windows and the screen edge.
+  outer_gap: "20px"
+
+# Highlight active/inactive windows with a colored border.
+# ** Exclusive to Windows 11 due to API limitations.
+focus_borders:
+  active:
+    enabled: false
+    color: "#0000ff"
+
+  inactive:
+    enabled: false
+    color: "#ff0000"
+
+
+
+
+# My scheme
+# -------------------------
+
+# Foreground
+define: &fg 'white'
+
+# Background 
+define: &bg 'black'
+
+# windows dark mode color: "#202020"
+# semi-transparent: "#0000007f"
+
+# -------------------------
+
+
+bar:
+  height: "21px"
+  position: "top"
+  BACKGROUND_opacity: 0
+  foreground: *fg
+  background: *bg
+  font_family: "SF Pro"
+  font_weight: "700"
+  #font_family: "3270 Nerd Font"
+  #font_family: "HeavyData Nerd Font"
+  #font_family: "ProggyClean Nerd Font"
+  #font_family: "GohuFont 14 Nerd Font Mono"
+  #font_family: "MartianMono Nerd Font Mono"
+  font_size: "12px"
+  offset_x: "0"
+  offset_y: "0"
+  border_radius: "0"
+  components_left:
+    - type: "image"
+      source: "C:\\Users\\geb\\.glaze-wm\\logo2.png"
+      padding: "5px 8px 5px 8px"
+    - type: "window title"
+      padding: "0 8px 0 4px"
+    - type: "workspaces"
+      # use 'focused_workspace_' to define properties for that chunk
+      focused_workspace_background: "#242424"
+      focused_workspace_border_radius: "8px"
+      padding: "0 0"
+      padding: ""
+    - type: "tiling direction"
+      label_horizontal: "="
+      label_vertical: "II"
+      margin: "0 1px"
+      foreground: "#242424"
+      padding: "0 8px"
+
+
+  components_right:
+    - type: "system tray"
+      label_expand_text: "                          <"
+      label_collapse_text: "                           "
+      padding: "4px 8px"
+
+    - type: "clock"
+      # Documentation on formatting date/time string:
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "ddd h:mm"
+      padding: "0 8px"
+
+
+
+
+# workspaces
+
+workspaces:
+  - name: "1"
+    display_name: "One"
+    keep_alive: true
+  - name: "2"
+    display_name: "Two"
+    keep_alive: true
+  - name: "3"
+    display_name: "Three"
+    keep_alive: true
+  - name: "4"
+    display_name: "Four"
+    keep_alive: true
+  - name: "5"
+    display_name: "Five"
+    keep_alive: true
+  - name: "6"
+    display_name: "Six"
+    keep_alive: true
+  - name: "7"
+    display_name: "Seven"
+    keep_alive: true
+  - name: "8"
+    display_name: "Eight"
+    keep_alive: true
+  - name: "9"
+    display_name: "Nine"
+    keep_alive: true
+
+
+# window rules
+
+window_rules:
+  # Task Manager requires admin privileges to manage and should be ignored unless running
+  # the WM as admin.
+
+  - command: "ignore"
+    match_process_name: "/Taskmgr|ScreenClippingHost/"
+
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  - command: 'set floating'
+    match_title: 'Picture in picture'
+
+  - command: 'ignore'
+    match_title: 'Picture-in-Picture'
+
+  - command: 'ignore'
+    match_title: 'Picture-in-Picture'
+
+  - command: "set floating"
+    match_title: "Run"
+
+  - command: "set floating"
+    match_title: "MiniPlayer"
+
+  - command: "ignore"
+    match_process_name: "RoundedTB"
+
+  - command: 'set floating'
+    match_process_name: "NextDNS"
+
+  - command: 'set floating'
+    match_process_name: "LocalSend"
+
+  - command: 'set floating'
+    match_process_name: "StoreDesktopExtension"
+
+  - command: "ignore"
+    match_process_name: "cs2"
+
+  - command: "ignore"
+    match_process_name: "VALORANT"
+
+  - command: "ignore"
+    match_process_name: "snipaste"
+
+  - command: "set floating"
+    match_process_name: "AppleTV"
+
+  - command: "ignore"
+    match_process_name: "AMPLibraryAgent"
+
+  - command: "set floating" 
+    match_title: "Jellyfin Media Player"
+
+  - command: "set floating" 
+    match_title: "StrokeIT"
+
+  - command: "set floating"
+    match_title: "Calculator"
+
+  - command: "set floating"
+    match_process_name: "SnippingTool"
+
+  - command: "set floating"
+    match_process_name: "PowerToys.Peek.UI"
+
+# the rest of these came from a list of common exclusions found on github:
+  - command: "set floating"
+    match_process_name: CredentialUIBroker
+  - command: "set floating"
+    match_class_name: Chrome_RenderWidgetHostHWND
+  - command: "set floating"
+    match_class_name: TApplication
+  - command: "set floating"
+    match_class_name: TWizardForm
+  - command: "set floating"
+    match_class_name: SunAwtDialog
+  - command: "set floating"
+    match_class_name: _WwB
+  - command: "set floating"
+    match_class_name: _WwB
+  - command: "set floating"
+    match_class_name: _WwB
+  - command: "set floating"
+    match_title: Microsoft Teams Notifications
+  - command: "set floating"
+    match_class_name: _WwB
+  - command: "set floating"
+    match_class_name: MozillaTaskbarPreviewClass
+  - command: "set floating"
+    match_process_name: NohBoard
+  - command: "set floating"
+    match_process_name: Paradox Launcher
+  - command: "set floating"
+    match_process_name: PowerToys.ColorPickerUI
+  - command: "set floating"
+    match_process_name: PowerToys.ImageResizer
+  - command: "set floating"
+    match_process_name: ProcessHacker
+  - command: "set floating"
+    match_class_name: SunAwtDialog
+  - command: "set floating"
+    match_process_name: QuickLook
+  - command: "set floating"
+    match_process_name: RepoZ
+  - command: "set floating"
+    match_class_name: Chrome_RenderWidgetHostHWND
+  - command: "set floating"
+    match_class_name: Chrome_RenderWidgetHostHWND
+  - command: "set floating"
+    match_class_name: Shell_Dialog
+  - command: "set floating"
+    match_class_name: TaskManagerWindow
+  - command: "set floating"
+    match_process_name: tcconfig
+  - command: "set floating"
+    match_process_name: TranslucentTB
+  - command: "set floating"
+    match_class_name: OperationStatusWindow
+  - command: "set floating"
+    match_title: Control Panel
+  - command: "set floating"
+    match_class_name: MsiDialogCloseClass
+  - command: "set floating"
+    match_title: Hotkey sink
+  - command: "set floating"
+    match_process_name: Zoom
+  - command: "set floating"
+    match_process_name: ueli
+  - command: "set floating"
+    match_process_name: System
+
+  # Some applications have borders that extend past the normal border size for some reason:
+  - command: "resize borders 0px 0px 0px 0px"
+    match_process_name: "steam"
+
+  - command: "resize borders 0px 0px 0px 0px"
+    match_process_name: "Discord"
+
+
+
+
+
+# keybinds
+
+binding_modes:
+  - name: "resize"
+    keybindings:
+      # Resize focused window by a percentage or pixel amount.
+      - command: "resize width -2%"
+        bindings: ["A", "Left"]
+      - command: "resize width +2%"
+        bindings: ["D", "Right"]
+      - command: "resize height +2%"
+        bindings: ["W", "Up"]
+      - command: "resize height -2%"
+        bindings: ["S", "Down"]
+      # Press enter/escape to return to default keybindings.
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+
+keybindings:
+  # Shift focus in a given direction.
+  - command: "focus left"
+    bindings: ["Alt+A"]
+  - command: "focus right"
+    bindings: ["Alt+D"]
+  - command: "focus up"
+    bindings: ["Alt+W"]
+  - command: "focus down"
+    bindings: ["Alt+S"]
+
+  # Move focused window in a given direction.
+  - command: "move left"
+    bindings: ["Alt+Shift+A", "Alt+Shift+Left"]
+  - command: "move right"
+    bindings: ["Alt+Shift+D", "Alt+Shift+Right"]
+  - command: "move up"
+    bindings: ["Alt+Shift+W", "Alt+Shift+Up"]
+  - command: "move down"
+    bindings: ["Alt+Shift+S", "Alt+Shift+Down"]
+
+  # Resize focused window by a percentage or pixel amount.
+  - command: "resize width -1%"
+    binding: "Control+Alt+A"
+  - command: "resize width +1%"
+    binding: "Control+Alt+D"
+  - command: "resize height +1%"
+    binding: "Control+Alt+W"
+  - command: "resize height -1%"
+    binding: "Control+Alt+S"
+
+  # As an alternative to the resize keybindings above, resize mode enables resizing via
+  # HJKL or arrow keys. The binding mode is defined above with the name "resize".
+  - command: "binding mode resize"
+    binding: "Alt+R"
+
+  # Change tiling direction. This determines where new tiling windows will be inserted.
+  - command: "tiling direction toggle"
+    binding: "Alt+V"
+
+  # Change focus between floating / tiling windows.
+  - command: "focus mode toggle"
+    binding: "Alt+X"
+
+  # Change the focused window to be floating / tiling.
+  - command: "toggle floating"
+    binding: "Alt+Shift+X"
+
+  # Change the focused window to be maximized / unmaximized.
+  - command: "toggle maximized"
+    binding: "Alt+F"
+
+  # Minimize focused window.
+  - command: "set minimized"
+    binding: "Alt+E"
+
+  # Close focused window.
+  - command: "close"
+    binding: "Alt+Q"
+
+  # Kill GlazeWM process safely.
+  - command: "exit wm"
+    binding: "Alt+Shift+Q"
+
+  # Re-evaluate configuration file.
+  - command: "reload config"
+    binding: "Alt+Shift+R"
+
+  # Launch CMD terminal (alternatively `exec cmd` or `exec %ProgramFiles%/Git/git-bash.exe`
+  # to start Windows Terminal and Git Bash respectively.
+  #- command: "exec wt"
+  #  binding: "Alt+Enter"
+  - command: "exec C:/Users/geb/AppData/Local\Programs/anytype/Anytype.exe"
+    binding: "Alt+Enter"
+
+  - command: "exec Explorer.exe"
+    binding: "Alt+Shift+F"
+
+  # Focus the workspace that last had focus.
+
+
+  # Focus the next/previous workspace defined in `workspaces` config.
+  - command: "focus workspace next"
+    binding: "Alt+C"
+  - command: "focus workspace prev"
+    binding: "Alt+Z"
+
+  # Change focus to a workspace defined in `workspaces` config.
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+  - command: "focus workspace 6"
+    binding: "Alt+6"
+  - command: "focus workspace 7"
+    binding: "Alt+7"
+  - command: "focus workspace 8"
+    binding: "Alt+8"
+  - command: "focus workspace 9"
+    binding: "Alt+9"
+
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    binding: "Alt+Shift+5"
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    binding: "Alt+Shift+6"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    binding: "Alt+Shift+7"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    binding: "Alt+Shift+8"
+  - commands: ["move to workspace 9", "focus workspace 9"]
+    binding: "Alt+Shift+9"
