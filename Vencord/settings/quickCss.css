@@ -187,20 +187,6 @@ margin-right: 0px;
     opacity: .5;
 }
 
-/* hide custom status from user tray */
-.panelSubtextContainer_f28bed {
-    display: none;
-}
-
-/* adjust name in user tray */
-.text-sm-normal_e612c7.title__10613 {
-    font-size: 12pt !important;
-    color: var(--interactive-normal);
-    background-color: var(--background-secondary); 
-    border-radius: 4px;
-    padding: 3px;
-    text-align: center;
-}
 
 /* hide "create channel" under category */
 .children_d4d259 {
@@ -382,8 +368,10 @@ span[style="color: var(--primary-400);"]::after {
 }
 
 
-
-
+/* vc online themes box */
+.textarea_c5a7a3 {
+    height: 400px;
+}
 
 
 

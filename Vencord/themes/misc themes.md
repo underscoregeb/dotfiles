@@ -16,5 +16,6 @@ https://raw.githubusercontent.com/iamdevnitesh/gruvbox-discord/main/gruvbox-disc
 /https://raw.githubusercontent.com/refact0r/midnight-discord/master/midnight.theme.css
 /https://raw.githubusercontent.com/refact0r/midnight-discord/master/midnight-classic.theme.css
 /https://raw.githubusercontent.com/TheCommieAxolotl/BetterDiscord-Stuff/main/Ultra/Ultra.theme.css
+/https://takosthings.github.io/Fluent-Discord/Fluent-Discord.theme.css
 
 ```
